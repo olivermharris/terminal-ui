@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+    --terminal-color: #00aa00;
+}
+
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    background-color: rgb(15, 15, 15);
+    color: #ccc;
+    font-size: 2vmin;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 2.5em;
+    letter-spacing: -5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.term-col {
+    color: var(--terminal-color);
+}
+
+#boot {
+    font-size: 0.8em;
+}
+
+#controls {
+    width: 50%;
+    color: #ccc;
+    font-size: 1em;
+    padding: 0.1em 0.4em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: width 0.4s ease-in-out;
+}
+
+#controls:focus {
+    width: 100%;
+}
+
+nav {
+    width: 70vw;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav ul li {
+    cursor: pointer;
+}
+
+
+.container {
+    max-width: 60vw;
+    height: 70vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.cursor {
+    font-weight: 700;
+    animation: 1s blink step-end infinite;
+}
+
+.uiShift {
+    animation: uiShift 5s;
+    background-color: rgb(70, 70, 70);
+}
+  
+@keyframes blink {
+    from,
+    to {
+      color: transparent;
+    }
+  
+    50% {
+      color: var(--text-color);
+    }
+
+}
+
+@keyframes uiShift {
+    from {
+        background-color: rgb(15, 15, 15);
+    }
+    to {
+        background-color: rgb(70, 70, 70);
+    }
+}
